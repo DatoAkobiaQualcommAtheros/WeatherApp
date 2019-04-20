@@ -11,12 +11,13 @@ SECRET_KEY = 'a91t7@3$zt6n&y@$dql$fsfr-=%uyn()c2!y%l%w4aln_yqb=k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [u'weatherqualcommatheros.herokuapp.com']
+ALLOWED_HOSTS = [u'weatherqualcommatheros.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'main_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -111,4 +112,3 @@ STATIC_URL = '/static/'
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
