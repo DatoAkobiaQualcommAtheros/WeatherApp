@@ -8,7 +8,7 @@ def index(request):
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=54410fad62887f6460fa74a2a427d627'
     if request.method == 'POST':
         form = CityForm(request.POST)
-        
+        form.save()
 
     form = CityForm()
     cities = City.objects.all()
